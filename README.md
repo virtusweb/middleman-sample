@@ -1,6 +1,6 @@
 # Middleman base
 
-This is a [middleman][middleman] base site, using [haml][haml] and [twitter-bootstrap][twitter-bootsrap].
+This is a [middleman][middleman] base site, using [haml][haml] and [twitter-bootstrap][twitter-bootstrap].
 
 To get a copy of this site do the following:
 
@@ -8,7 +8,7 @@ To get a copy of this site do the following:
     cd mysite
     bundle
 
-Read the (beta) Middleman documentation [here][middleman-doc]
+Read the (beta) Middleman documentation [here][middleman-doc].
 
 [middleman]: https://github.com/middleman/middleman
 [middleman-doc]: http://beta.middlemanapp.com/
