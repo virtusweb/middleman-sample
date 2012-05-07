@@ -1,10 +1,10 @@
-# Middleman base
+# Middleman sample
 
 This is a [middleman][middleman] base site, using [haml][haml] and [twitter-bootstrap][twitter-bootstrap].
 
 To get a copy of this site do the following:
 
-    git clone git://github.com/virtusweb/middleman-base.git mysite
+    git clone git://github.com/virtusweb/middleman-sample.git mysite
     cd mysite
     bundle
 
