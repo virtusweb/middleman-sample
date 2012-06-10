@@ -4,6 +4,7 @@ GEM
     activesupport (3.2.5)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    builder (3.0.0)
     chunky_png (1.2.5)
     coffee-script (2.2.0)
       coffee-script-source
@@ -33,6 +34,9 @@ GEM
       middleman-core (= 3.0.0.rc.1)
       middleman-more (= 3.0.0.rc.1)
       middleman-sprockets (= 3.0.0.rc.1)
+    middleman-blog (3.0.0.rc.1)
+      maruku (~> 0.6.0)
+      middleman-core (= 3.0.0.rc.1)
     middleman-core (3.0.0.rc.1)
       activesupport (~> 3.2.4)
       bundler (~> 1.1)
@@ -103,4 +107,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  builder
   middleman (~> 3.0.0.rc.1)
+  middleman-blog (~> 3.0.0.rc.1)
