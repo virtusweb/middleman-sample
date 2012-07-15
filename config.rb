@@ -3,8 +3,9 @@
 ###
 
 activate :blog do |blog|
-  blog.permalink = "blog/:year/:month/:day/:title.html"
-  blog.sources = "blog/:year-:month-:day-:title.html"
+  blog.prefix = "blog"
+  # blog.permalink = ":year/:month/:day/:title.html"
+  # blog.sources = ":year-:month-:day-:title.html"
   # blog.taglink = "tags/:tag.html"
   blog.layout = "blog_layout"
   # blog.summary_separator = /(READMORE)/
@@ -15,10 +16,10 @@ activate :blog do |blog|
   # blog.default_extension = ".markdown"
 
   blog.tag_template = "blog/tag.html"
-  blog.calendar_template = "calendar.html"
+  blog.calendar_template = "blog/calendar.html"
 end
 
-page "/feed.xml", :layout => false
+page "blog/feed.xml", :layout => false
 
 ### 
 # Compass
