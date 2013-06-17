@@ -1,9 +1,24 @@
 !!! 5
 %html
   %head
-    %title= data.page.title || "My site"
+    %title= data.page.title || "dobleclip"
     = stylesheet_link_tag "bootstrap"
     = javascript_include_tag  "bootstrap"
   %body
-    .container
-      = yield
+    .container-fluid
+      .row-fluid
+        .span12
+          %h2 dobleclip
+          %h4 Tu negocio bajo control
+      .row-fluid
+        .span8
+          = yield
+        .span4
+          %ul
+            %li= link_to 'Blog', '/blog'
+            %li= link_to 'Manual', '/manual'
+            %li= link_to 'Contacto', 'contacto'
+      .row-fluid
+        .span8
+          %p.text-center
+            %small dobleclip &copy; 2013
