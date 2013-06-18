@@ -6,27 +6,38 @@
     = stylesheet_link_tag "bootstrap"
     = javascript_include_tag  "bootstrap"
   %body
-    .container
-      #main{:role => "main"}
-        = yield
-      %aside
-        %h2 Recent Articles
-        %ol
-          - blog.articles[0...10].each do |article|
-            %li
-              %a{:href => article.url}= article.title
-              %span= article.date.strftime('%b %e')
-        %h2 Tags
-        %ol
-          - blog.tags.each do |tag, articles|
-            %li
-              %a{:href => tag_path(tag)}
-                = tag
-                (#{articles.size})
-        %h2 By Year
-        %ol
-          - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-            %li
-              %a{:href => blog_year_path(year)}
-                = year
-                (#{articles.size})
+    .container-fluid
+      .row-fluid
+        .span12
+          %h2 dobleclip
+          %h4 Tu negocio bajo control
+      .row-fluid
+        .span8
+          - if is_blog_article?
+            %h4= current_article.title
+            %small= current_article.date.strftime('%Y-%m-%d')
+            %br
+          = yield
+        .span4
+          %ul
+            %li= link_to 'Principal', '/'
+            %li= link_to 'Blog', '/blog'
+            %li= link_to 'Manual', '/manual'
+            %li= link_to 'Contacto', 'contacto'
+          %h4 Artículos recientes
+          %ul
+            - blog.articles[0...10].each do |article|
+              %li
+                %a{:href => article.url}= article.title
+                %small= article.date.strftime('%Y-%m-%d')
+          %h4 Temas
+          %ul
+            - blog.tags.each do |tag, articles|
+              %li
+                %a{:href => tag_path(tag)}
+                  = tag
+                  (#{articles.size})
+      .row-fluid
+        .span8
+          %p.text-center
+            %small dobleclip &copy; 2013
